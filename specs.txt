@@ -1,0 +1,9 @@
+This program allows users to input a sentece and will take that sentence and return it back with all of the vewels replaced with "-".
+
+1) User writes and submits their sentence. ex: "The cat is green."
+
+2) Program changes all of the vowels to "-". ex: "Th- c-at -s gr--n."
+
+3) The new sentence is displayed on a new page.
+
+4) The new page loops back to the homepage so the user can play again.
