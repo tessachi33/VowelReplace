@@ -3,52 +3,42 @@ import spark.template.velocity.VelocityTemplateEngine;
 import static spark.Spark.*;
 import java.util.*;
 
-//main methos and layout
-public class VowelReplace {
+public class VowellReplace {
   public static void main(String[] args){
-    String layout = "templates/latout.vtl";
+    String layout = ("templates/layout.vtl");
 
-    // The page where the user inputs sentence/ inputs page layout
-    get("/", (request, response) -> {
-      Map<String, String> model = new HashMap<String, String>();
-      model.put("template", "templates/input.vtl");
-    }, new VelocityTemplateEngine());
+    // input page is where the user enters their information
 
-    //This is where the useres sentence gets displayed/output page layout
-    get("/output", (request, response) ->{
-      Map<String, String> model = new HashMap<String, String>();
+      get("/", (request, response) -> {
+        HashMap<String, Object> model = new HashMap<String, Object>();
+        model.put("template", "templates/input.vtl");
+        return new ModelAndView(model, layout);
+      }, new VelocityTemplateEngine());
 
-      String userWord = request.queryParams("userInput");
+     //Users String needs to be converted to char array here
+    //  String userInout = "userInput";
+    //  char[] vowelCharArray = userInput.toCharArray();
 
+    // output page is where the information is displayed to the user
 
-          model.put("userInput", userWord)
-
-       return new model.put("template", "templates/output.vtl");
-     }, new VelocityTemplateEngine());
-  }
-
-  //tells us that the userInput will be a string and is made into a char array
-  public static String = userInputArray.toCharArray();
-
-  //the Char array that allows the String to break down the characters to be replaced with HashMap info
-  char[] userInputArray = userInput.toCharArray();
-
-  //This is the HashMap that dictates that the vowels will be "-"
-  HashMap<Character, String> vowelMap = new HashMap<Character, String>();
-
-  vowelMap.put('a', "-");
-  vowelMap.put('e', "-");
-  vowelMap.put('i', "-");
-  vowelMap.put('o', "-");
-  vowelMap.put('u', "-");
-  //As y is only sometimes a vowel, does it need it's own while loop?
-  vowelMap.put('y', "-");
+      get("/output", (request, response) -> {
+        HashMap<String, Object> model = new HashMap<String, Object>();
+        return new ModelAndView(model, "templates/results.vtl");
+      }, new VelocityTemplateEngine());
+    }
 
 
+      public static Char[] userInputArray (String userInput) {
+              char[] userInputArray = userInput.toCharArray();
 
+              HashMap<Character, String> vowelMap = new HashMap<Character, String>();
+              vowelMap.put('a', "-");
+              vowelMap.put('e', "-");
+              vowelMap.put('i', "-");
+              vowelMap.put('o', "-");
+              vowelMap.put('u', "-");
 
-
-
-
-
-}
+    if(userInput = 'a' || 'e' || ){
+      System.out.printLn(userInput);}
+    }
+ }
