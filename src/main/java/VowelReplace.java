@@ -36,6 +36,9 @@ public class VowelReplace {
       //making the input String's letters lowercase
       String input = userInput.toLowerCase();
 
+      //make an empty output sting to create string in for
+      String userOutput = "";
+
       //making the String's letters into an array
       String [] inputArray = input.split("");
 
@@ -43,21 +46,21 @@ public class VowelReplace {
       for(String letter : inputArray) {
 
         if (letter == "a"){
-          System.out.println("-");
+          userOutput.concat("-");
         } else if (letter == "e"){
-          System.out.println("-");
+          userOutput.concat("-");
         } else if (letter == "i"){
-          System.out.println("-");
+          userOutput.concat("-");
         } else if (letter == "o"){
-          System.out.println("-");
+          userOutput.concat("-");
         } else if (letter == "u"){
-          System.out.println("-");
+          userOutput.concat("-");
         } else{
-          System.out.println(letter);
+          userOutput.concat(letter);
         };
 
       }
-    return userInput;
+    return userOutput;
 
   }
 }
