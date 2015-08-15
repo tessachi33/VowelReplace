@@ -20,9 +20,14 @@ public class VowelReplace {
        Map<String, Object> model = new HashMap<String, Object>();
        model.put("template", "templates/output.vtl");
 
+           String userInput = request.queryParams("userInput");
 
-       return new ModelAndView(model, layout);
-     }, new VelocityTemplateEngine());
+            String outPut = vowel(userInput);
+
+            model.put("userInput", userInput);
+            model.put("outPut", vowel(userInput));
+            return new ModelAndView(model, layout);
+          }, new VelocityTemplateEngine());
    }
 
 //grabbing the user's input String
