@@ -26,30 +26,33 @@ public class VowelReplace {
    }
 
 //grabbing the user's input String
-public static String input = (String, userInput);
+  public static String vowel(String userInput){
 
-//making the input String's letters lowercase
-String input = input.toLowerCase();
+      //making the input String's letters lowercase
+      String input = userInput.toLowerCase();
 
-//making the String's letters into an array
-String [] inputArray = input.split("");
+      //making the String's letters into an array
+      String [] inputArray = input.split("");
 
-//going into the letter array and
-for (String letter : inputArray) {
+      //going into the letter array and
+      for(String letter : inputArray) {
 
-  if (letter == "a"){
-    System.out.println("-");
-  } else if (letter == "e"){
-    System.out.println("-");
-  } else if (letter == "i"){
-    System.out.println("-");
-  } else if (letter == "o"){
-    System.out.println("-");
-  } else if (letter == "u"){
-    System.out.println("-");
-  } else{
-    System.out.println(letter);
+        if (letter == "a"){
+          System.out.println("-");
+        } else if (letter == "e"){
+          System.out.println("-");
+        } else if (letter == "i"){
+          System.out.println("-");
+        } else if (letter == "o"){
+          System.out.println("-");
+        } else if (letter == "u"){
+          System.out.println("-");
+        } else{
+          System.out.println(letter);
+        };
+
+      }
+    return userInput;
+
   }
-
-}
 }
