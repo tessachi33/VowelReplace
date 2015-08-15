@@ -36,11 +36,11 @@ public class VowelReplace {
       //making the input String's letters lowercase
       String input = userInput.toLowerCase();
 
-      //make an empty output sting to create string in for
-      String userOutput = "";
-
       //making the String's letters into an array
       String [] inputArray = input.split("");
+
+      //make an empty output sting to create string in for
+      String userOutput = "";
 
       //going into the letter array and
       for(String letter : inputArray) {
@@ -57,7 +57,7 @@ public class VowelReplace {
           userOutput.concat("-");
         } else{
           userOutput.concat(letter);
-        };
+        }
 
       }
     return userOutput;
