@@ -45,15 +45,15 @@ public class VowelReplace {
       //going into the letter array and
       for(String letter : inputArray) {
 
-        if (letter == "a"){
+        if (letter.equals("a")){
           userOutput = userOutput.concat("-");
-        } else if (letter == "e"){
+        } else if (letter.equals("e")){
           userOutput = userOutput.concat("-");
-        } else if (letter == "i"){
+        } else if (letter.equals("i")){
           userOutput = userOutput.concat("-");
-        } else if (letter == "o"){
+        } else if(letter.equals("o")){
           userOutput = userOutput.concat("-");
-        } else if (letter == "u"){
+        } else if (letter.equals("u")){
           userOutput = userOutput.concat("-");
         } else{
         userOutput = userOutput.concat(letter);
