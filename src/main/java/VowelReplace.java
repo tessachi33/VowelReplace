@@ -46,17 +46,17 @@ public class VowelReplace {
       for(String letter : inputArray) {
 
         if (letter == "a"){
-          userOutput.concat("-");
+          userOutput = userOutput.concat("-");
         } else if (letter == "e"){
-          userOutput.concat("-");
+          userOutput = userOutput.concat("-");
         } else if (letter == "i"){
-          userOutput.concat("-");
+          userOutput = userOutput.concat("-");
         } else if (letter == "o"){
-          userOutput.concat("-");
+          userOutput = userOutput.concat("-");
         } else if (letter == "u"){
-          userOutput.concat("-");
+          userOutput = userOutput.concat("-");
         } else{
-          userOutput.concat(letter);
+        userOutput = userOutput.concat(letter);
         }
 
       }
